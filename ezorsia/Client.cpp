@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "AddyLocations.h"
 #include "codecaves.h"
+#include "IMEHook.h"
 
 // Variable Declarations
 int Client::m_nGameHeight = 768;
@@ -459,6 +460,7 @@ void Client::UpdateLogin()
 
 void Client::AdventureMS()
 {
+	IMEHook::InitIMEHooks();
 
 #pragma region AdventureMS Gameplay Changes
 
