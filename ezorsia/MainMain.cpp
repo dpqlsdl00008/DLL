@@ -74,6 +74,7 @@ MainMain::MainMain(std::function<void()> pPostMutexFunc)
 	// Read from Config
 	Client::m_nGameWidth = reader.GetInteger("general", "width", 1366);
 	Client::m_nGameHeight = reader.GetInteger("general", "height", 768);
+	Client::dFont = reader.Get("general", "Font", "Arial");
 	unsigned int sleepySleepy = reader.GetInteger("debug", "sleepTime", 0);
 
 	/*

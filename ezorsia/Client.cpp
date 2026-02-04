@@ -6,6 +6,7 @@
 int Client::m_nGameHeight = 768;
 int Client::m_nGameWidth = 1366;
 int Client::MsgAmount = 10;
+std::string Client::dFont = "Arial"; // GMS83 default font
 std::string Client::ServerIP_Address = "xxx.xxx.xx.xx";
 
 

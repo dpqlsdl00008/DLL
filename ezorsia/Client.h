@@ -10,6 +10,7 @@ public:
 	static int m_nGameHeight;
 	static int m_nGameWidth;
 	static int MsgAmount;
+	static std::string dFont;
 	static std::string ServerIP_Address;
 
 #pragma endregion
