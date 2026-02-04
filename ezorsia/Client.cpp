@@ -866,13 +866,13 @@ void Client::AdventureMS()
 	Memory::WriteInt(0x0053500F + 1, m_nGameWidth / 2); //CField::ShowScreenEffect
 
 	// 캐릭터 선택 스탯 텍스트 이동(캐릭터 선택 화면 UI 정렬)
-	Memory::WriteByte(0x00602D80 + 1, 0x38); // Job
-	Memory::WriteByte(0x00602E25 + 1, 0x38); // LV.
-	Memory::WriteByte(0x00602F7F + 1, 0x38); // STR
-	Memory::WriteByte(0x006030D4 + 1, 0x38); // DEX
-	Memory::WriteByte(0x00602ED0 + 1, 0x92); // FAME, INT, LUK
-	Memory::WriteByte(0x00603437 + 1, 0x9B); // World Ranking Change
-	Memory::WriteByte(0x006038B6 + 1, 0x9B); // Job Ranking Change
+	//Memory::WriteByte(0x00602D80 + 1, 0x38); // Job
+	//Memory::WriteByte(0x00602E25 + 1, 0x38); // LV.
+	//Memory::WriteByte(0x00602F7F + 1, 0x38); // STR
+	//Memory::WriteByte(0x006030D4 + 1, 0x38); // DEX
+	//Memory::WriteByte(0x00602ED0 + 1, 0x92); // FAME, INT, LUK
+	//Memory::WriteByte(0x00603437 + 1, 0x9B); // World Ranking Change
+	//Memory::WriteByte(0x006038B6 + 1, 0x9B); // Job Ranking Change
 	// Memory::WriteByte(0x00603786 + 1, 0x69); // Job Ranking "Ranked at X"
 
 	// 캐릭터 선택 서버명 제거(서버 이름 표시 제거)
@@ -885,7 +885,7 @@ void Client::AdventureMS()
 	// 채팅창 텍스트 정렬(채팅 UI 정렬)
 	// Memory::WriteByte(0x008DD05A + 2, 0x4);
 	// Memory::WriteByte(0x008DD067 + 2, 0x2);
-	Memory::CodeCave(chat_Y_offset_cave, 0x008DD6B9, 5);
+	//Memory::CodeCave(chat_Y_offset_cave, 0x008DD6B9, 5);
 
 	// 마우스 휠 버그 수정
 	Memory::CodeCave(fixMouseWheelHook, fixMouseWheelAddr, 15);
