@@ -156,6 +156,7 @@ namespace IMEHook
 
     // 라틴 문자 체크 비활성화 (한글/중국어 입력 허용)
     bool DisableLatinCheck() {
+        MessageBoxA(NULL, "DisableLatinCheck 실행됨", "Debug", MB_OK);
         // 캐릭터 이름 유효성 검사 우회
         Memory::PatchNop(0x007A015D, 2);
 
@@ -171,6 +172,9 @@ namespace IMEHook
         // CCtrlEdit::CopyClipBoard - 채팅 시 텍스트 복사 문제 해결
         Memory::PatchNop(0x004CAE7D, 2);
         Memory::PatchNop(0x004CAEA4, 2);
+
+        // 한글 줄바꿈 수정 (추가)
+        Memory::PatchNop(0x008E4252, 2);
 
         return true;
     }
