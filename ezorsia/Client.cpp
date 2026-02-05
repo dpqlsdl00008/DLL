@@ -771,6 +771,8 @@ void Client::AdventureMS()
 	// 펫 위치를 캐릭터 뒤로
 	Memory::WriteByte(0x0070451B + 2, 1);
 
+	Memory::PatchNop(0x008E4252, 2); // 채팅 줄바꿈 수정
+
 				// UI 확장
 /*#pragma region Expanded UIs
 
